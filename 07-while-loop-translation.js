@@ -24,7 +24,3 @@ function eCounter(word) {
 console.log(eCounter("apple")); // => 1
 console.log(eCounter("appEEleapple")); // => 4
 console.log(eCounter("Appleee")); // => 3
-
-console.log(eCounter("apple")); //  1
-console.log(eCounter("appleapple")); //  2
-console.log(eCounter("Appleee")); //  3
