@@ -6,29 +6,18 @@ to use a `for` loop instead of the `while` loop it is currently using. If you
 forget the syntax for a `for` loop go back and check out the reading.
 */
 
-function eCounter(word) {
-  let count = 0;
-  let i = 0;
-
-  while (i <= word.length - 1) {
-    let char = word[i];
-    if (char.includes('E') || char.includes('e')) {
-      count += 1;
+function aCounter(word) {
+	let count = 0;
+  	
+  	for (let i = 0; i < word.length; i++) {
+    	let char = word[i];
+      	if (char.includes('A') || char.includes('a')) {
+            count += 1
+        }
     }
-    i++
-  }
   return count;
 }
-//   DISCARDED CODE
-  // for (let index = 0; index < word.length; index++) {
-  //   let char = word[index];
-  //   if (char === "e" || char === "E") {
-  //     count += 1;
-  //   }
-  // }
 
-
-
-console.log(eCounter("apple")); // => 1
-console.log(eCounter("appEEleapple")); // => 4
-console.log(eCounter("Appleee")); // => 3
+console.log(aCounter("apple")); // => 1
+console.log(aCounter("appleappleAA")); // => 4
+console.log(aCounter("aAapple")); // => 3
