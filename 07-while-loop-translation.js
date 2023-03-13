@@ -8,18 +8,22 @@ to use a `while` loop instead of a `for` loop! If you forget the syntax for a
 
 
 function eCounter(word) {
-    let count = 0;
+  let count = 0;
+  let i = 0;
 
-    // convert this for loop into a while loop
-    for (let index = 0; index < word.length; index++) {
-        let char = word[index];
-        if (char === "e" || char === "E") {
-            count += 1;
-        }
+  while (i <= word.length - 1) {
+    let char = word[i];
+    if (char.includes('e') || char.includes('E')) {
+      count += 1;
     }
+    i++
+  }
+  return count;
+}
 
-    return count;
-};
+console.log(eCounter("apple")); // => 1
+console.log(eCounter("appEEleapple")); // => 4
+console.log(eCounter("Appleee")); // => 3
 
 console.log(eCounter("apple")); //  1
 console.log(eCounter("appleapple")); //  2
